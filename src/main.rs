@@ -346,6 +346,7 @@ async fn rocket(#[shuttle_runtime::Secrets] secrets: SecretStore) -> shuttle_roc
     let allowed_origins = vec![
         "https://tathagatyash.com".to_string(),
         "https://ty13.work".to_string(),
+        "https://tathagatyash.vercel.app/".to_string(),
         //"http://127.0.0.1:8000".to_string(),
        // "http://127.0.0.1:5173".to_string(),
        //"http://0.0.0.0:8000".to_string(), // For local development
