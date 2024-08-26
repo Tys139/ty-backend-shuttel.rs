@@ -1,0 +1,21 @@
+
+curl -X POST http://127.0.0.1:8000/goodgodzilla  -H "Authorization: Bearer TY"  --header -D "{"role" : "user", "content": "Hello, how are you?"}"
+
+curl -X GET http://127.0.0.1:8000/test_auth -H "Origin: 127.0.0.1:8000" -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MjQ2Mzk0NDEsImlhdCI6MTcyNDYxNDI0MX0.FEnTb53g8ymUwJjZV_4ixIhF41W7ebOrE4nR0IwqV90"   ^
+curl -X POST http://localhost:8000/goodgodzilla ^
+     -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MjQ2NjA2MDMsImlhdCI6MTcyNDYzNTQwM30.A2H3WEkMmpx5Ookc56s6dI2g87e4HIuGrvMp2dnd_kc" ^
+     -H "Content-Type: application/json" ^
+     -d "{\"role\": \"user\",\"content\": \"how are you and tempearture of torotno\",\"model\": \"llama3-8b-8192\"}"
+
+
+curl "https://api.groq.com/openai/v1/chat/completions" ^
+  -X POST ^
+  -H "Content-Type: application/json" ^
+  -H "Authorization: Bearer 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" ^
+  -d "{\"messages\": [{\"role\": \"user\", \"content\": \"fact about toronto and what is the temorature\"}], \"model\": \"llama3-8b-8192\", \"temperature\": 1, \"max_tokens\": 1024, \"top_p\": 1, \"stream\": false, \"stop\": null}"
+
+curl "https://api.groq.com/openai/v1/chat/completions" ^
+  -X POST ^
+  -H "Content-Type: application/json" ^
+  -H "Authorization: Bearer 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" ^
+  -d "{\"messages\": [{\"role\": \"user\", \"content\": \"testing\"}], \"model\": \"llama3-8b-8192\", \"temperature\": 1, \"max_tokens\": 1024, \"top_p\": 1, \"stream\": true, \"stop\": null}"
